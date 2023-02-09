@@ -2,19 +2,20 @@ package com.rafaelamaral.customer.controller;
 
 import com.rafaelamaral.customer.model.Customer;
 import com.rafaelamaral.customer.service.CustomerService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/customers")
-public class CustomerController {
+public record CustomerController(CustomerService customerService) {
 
-    private final CustomerService customerService;
 
-    public CustomerController(CustomerService customerService){
-        this.customerService = customerService;
+    @PostMapping
+    public void registerCustomer(@RequestBody  CustomerRequest customerRequest){
+      log.info("new customer registration {} " , customerRequest);
+      customerService.registrationCustomer(customerRequest);
     }
 
     @GetMapping
