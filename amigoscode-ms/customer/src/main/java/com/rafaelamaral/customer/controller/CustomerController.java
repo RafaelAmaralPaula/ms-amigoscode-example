@@ -2,6 +2,7 @@ package com.rafaelamaral.customer.controller;
 
 import com.rafaelamaral.customer.model.Customer;
 import com.rafaelamaral.customer.service.CustomerService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,8 +10,9 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/customers")
-public record CustomerController(CustomerService customerService) {
-
+@AllArgsConstructor
+public class CustomerController{
+    private final CustomerService customerService;
 
     @PostMapping
     public void registerCustomer(@RequestBody  CustomerRequest customerRequest){

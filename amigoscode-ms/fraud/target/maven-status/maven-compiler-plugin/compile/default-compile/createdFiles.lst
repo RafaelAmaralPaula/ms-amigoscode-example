@@ -1,0 +1,5 @@
+com/rafaelamaral/fraud/model/Fraud$FraudBuilder.class
+com/rafaelamaral/fraud/model/Fraud.class
+com/rafaelamaral/fraud/controller/FraudController.class
+com/rafaelamaral/fraud/service/FraudService.class
+com/rafaelamaral/fraud/repository/FraudRepository.class

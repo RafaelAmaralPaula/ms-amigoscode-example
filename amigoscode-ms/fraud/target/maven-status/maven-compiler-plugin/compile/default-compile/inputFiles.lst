@@ -1,0 +1,4 @@
+/home/rafael/dev/microservice-course/amigoscode-ms/fraud/src/main/java/com/rafaelamaral/fraud/service/FraudService.java
+/home/rafael/dev/microservice-course/amigoscode-ms/fraud/src/main/java/com/rafaelamaral/fraud/model/Fraud.java
+/home/rafael/dev/microservice-course/amigoscode-ms/fraud/src/main/java/com/rafaelamaral/fraud/repository/FraudRepository.java
+/home/rafael/dev/microservice-course/amigoscode-ms/fraud/src/main/java/com/rafaelamaral/fraud/controller/FraudController.java
