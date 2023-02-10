@@ -27,7 +27,7 @@ public class CustomerService{
                                     .build();
         customerRepository.save(customer);
        var fraudCheckResponse =  restTemplate.getForObject(
-                "http://localhost:8081/frauds/{customerId}",
+                "http://FRAUD/frauds/{customerId}",
                 FraudCheckResponse.class,
                 customer.getId()
         );
